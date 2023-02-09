@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: create_deaths_table
+    description: Table containing data from deaths table necessary for analysis
+    columns:
+      - name: date
+        description: date of observation
+        tests:
+          - not_null
+      - name: location
+        description: country observation occured
+        tests:
+          - not_null
+
+  - name: create_death_pct_variable
+    description: creates new table and calculates 'death_percentage' 
+    columns:
+      - name: date
+        description: date of observation
+        tests:
+          - not_null
+      - name: location
+        description: country observation ocurred
+        tests:
+          - not_null
