@@ -1,4 +1,4 @@
--- create table for reference
+-- create table with relevant covid death data
 
 SELECT location,
        date,
@@ -7,4 +7,5 @@ SELECT location,
        total_deaths, 
        population
 FROM covid-project-377302.covid_sql.deaths
+WHERE continent is not null
 ORDER BY 1, 2

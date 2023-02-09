@@ -1,4 +1,5 @@
 -- Look at Total Cases vs Total Deaths
+-- Shows likelihood of dying if you contract covid in your country
 
 SELECT location,
        date,

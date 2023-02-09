@@ -24,3 +24,47 @@ models:
         description: country observation ocurred
         tests:
           - not_null
+
+  - name: total_cases_vs_pop
+    description: creates new table and shows what percentage of the population has contracted covid on a given date
+    columns:
+      - name: date
+        description: date of observation
+        tests:
+          - not_null
+      - name: location
+        description: country observation ocurred
+        tests:
+          - not_null
+  
+  - name: highest_infection_rate
+    description: creates new table and Ranks countries by highest percentage of population infected with covid
+    columns:
+      - name: percent_population_infected
+        description: calculated field displaying max value of percentage_population_infected for each country
+        tests:
+          - not_null
+      - name: location
+        description: country observation ocurred
+        tests:
+          - not_null
+
+  - name: total_death_count_by_pop
+    description: creates new table and shows countries with highest death count
+    columns:
+      - name: total_death_count
+        description: total deaths
+        tests:
+          - not_null
+  
+  - name: total_deaths_by_continent
+    description: creates new table and shows total deaths by continent
+    columns:
+      - name: total_death_count
+        description: total deaths
+        tests:
+          - not_null
+      - name: location
+        description: continent observation ocurred
+        tests:
+          - not_null
