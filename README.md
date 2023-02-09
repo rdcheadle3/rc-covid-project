@@ -1,10 +1,8 @@
-Welcome to your new dbt project!
+Practice project using BigQuery and dbt. 
 
-### Using the starter project
+Succesfully connected github, dbt, and bigquery.
 
-Try running the following commands:
-- dbt run
-- dbt test
+Saved sql syntax as models in dbt. Used shema.yml to create documentation and to test models.
 
 
 ### Resources:
