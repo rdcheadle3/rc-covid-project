@@ -1,0 +1,21 @@
+-- CTE to express cumulative vaccinations and percent of population vaccinated
+
+WITH pop_vs_vacc AS 
+(SELECT dea.continent, 
+       dea.location, 
+       dea.population, 
+       vac.new_vaccinations,
+       SUM(CAST(vac.new_vaccinations AS int)) OVER 
+       (PARTITION BY dea.location
+       ORDER BY dea.location,
+                dea.date) AS cumulative_vaccinations        
+FROM covid-project-377302.covid_sql.deaths dea
+JOIN covid-project-377302.covid_sql.vaccinations vac 
+  ON dea.location = vac.location
+  AND dea.date = vac.date
+WHERE dea.continent is not null
+)
+
+SELECT *,
+       (cumulative_vaccinations/population)*100 AS percent_pop_vaccinated
+FROM pop_vs_vacc

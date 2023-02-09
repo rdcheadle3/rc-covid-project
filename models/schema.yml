@@ -68,3 +68,39 @@ models:
         description: continent observation ocurred
         tests:
           - not_null
+
+  - name: global_covid_numbers
+    description: creates new table and shows total new cases, total deaths, and total death percentage globally
+    columns:
+      - name: total_deaths
+        description: total deaths globally
+        tests:
+          - not_null
+      - name: total_cases
+        description: total cases globally
+        tests:
+          - not_null
+      - name: total_death_percentage
+        description: total death percentage globally
+        tests:
+          - not_null
+
+  - name: new_vaccinations_per_day
+    description: Table containing data showing new vaccination per day for each country over time
+    columns:
+      - name: date
+        description: date of observation
+        tests:
+          - not_null
+      - name: location
+        description: country observation occured
+        tests:
+          - not_null
+
+  - name: cte_cumulative_vacc_pct_vacc
+    description: CTE joining deaths and vaccination tables, creates cumulative vaccinations and cumulative percent of population vaccinated for each country
+    columns:
+      - name: location
+        description: country observation occured
+        tests:
+          - not_null
