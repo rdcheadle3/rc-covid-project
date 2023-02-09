@@ -2,7 +2,7 @@ Practice project using BigQuery and dbt.
 
 Succesfully connected github, dbt, and bigquery.
 
-Saved sql syntax as models in dbt. Used shema.yml to create documentation and to test models.
+Saved sql syntax as models in dbt. Used schema.yml to create documentation and to test models.
 
 
 ### Resources:
